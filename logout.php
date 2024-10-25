@@ -1,20 +1,17 @@
-<?php
-require_once("includes\\header.php")
+<?php 
+    require_once("includes\header.php");
 ?>
 
     <!-- Navbar -->
-    <?php
-require_once("includes\\navbar.php")
-?>
+    <?php require_once("includes\\navbar.php"); ?>
 
 <?php
 session_start();
 
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-                $_SESSION = [];
-                session_destroy();
-
+            $_SESSION = [];
+            session_destroy();
 }
 
 ?>

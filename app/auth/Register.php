@@ -1,12 +1,13 @@
 <?php 
+
 session_start();
 //received user input
 include('../config/DatabaseConnect.php');
 
-$fullname =htmlspecialchars ($_POST["fullName"]);
-$username =htmlspecialchars ($_POST["username"]);
-$password =htmlspecialchars ($_POST["password"]);
-$confirmPassword = htmlspecialchars ($_POST["confirmPassword"]);
+   $fullname        = htmlspecialchars($_POST["fullName"]);
+   $username        = htmlspecialchars($_POST["username"]);
+   $password        = htmlspecialchars($_POST["password"]);
+   $confirmPassword = htmlspecialchars($_POST["confirmPassword"]);
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     //validate confirmpassword
@@ -28,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $password = password_hash($password,PASSWORD_BCRYPT);
             $stmt->execute();
             header("location: /registration.php?");
-        $_SESSION["success"] = "Registration Successful";
+$_SESSION["success"] = "Registration Successful";
 
         exit;
         } catch (Exception $e){

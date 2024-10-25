@@ -32,10 +32,11 @@
                         <li><hr class="dropdown-divider"></li>
                         <li>
                             <form action="logout.php" method="POST">
-                             <button type="submit" class="dropdown-item">logout   
-                        <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+                            <button type="submit" class="dropdown-item">Logout</button>
+                            </form>
+                        
+                        </li>
                     </ul>
-                
                     </li>
                     <?php } ?> 
             </ul>

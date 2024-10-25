@@ -1,12 +1,9 @@
-<?php
-require_once("includes\\header.php")
+<?php 
+    require_once("includes\header.php");
 ?>
 
     <!-- Navbar -->
-    <?php
-require_once("includes\\navbar.php")
-?>
-
+    <?php require_once("includes\\navbar.php"); ?>
 
     <!-- Login Form -->
     <div class="container mt-5">

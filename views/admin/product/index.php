@@ -3,85 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Details - MyShop</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Navbar with Dropdown for User Account (Admin) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html">MyShop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-dashboard.html">Dashboard</a>
+                    </li>
+
+                    <!-- Dropdown for Admin User -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            AdminUser <!-- Replace with dynamic admin username -->
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     
-<?php
-$week = "monday";
-switch($week){
-    case "monday";
-    echo "Weekdays";
-    break;
-    case "tuesday";
-    echo "Weekdays";
-    break;
-    case "wednesday";
-    echo "Weekdays";
-    break;
-    case "thursday";
-    echo "Weekdays";
-    break;
-    case "thursday";
-    echo "Weekdays";
-    break;
-    case "friday";
-    echo "weekdays";
-    break;
-    case "saturday";
-    echo "Weekends";
-    break;
-    case "sunday";
-    echo "Weekends";
-    break;
+   
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+        <div class="text-center">
+            <h1 class="display-1 text-danger">401</h1>
+            <h2 class="mb-3">Unauthorized Access</h2>
+            <p class="lead">Sorry, you are not authorized to view this page.</p>
+            <a href="login.html" class="btn btn-primary">Go to Login</a>
+        </div>
+    </div> 
+    
+       
+    
+    <!-- Page Header -->
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Product List</h2>
+            <!-- Add New Product Button -->
+            <a href="product-maintenance.html" class="btn btn-success">Add New Product</a>
+        </div>
+        <p class="text-center">Manage all products in the catalog</p>
+        <hr>
+    </div>
 
-}
+    <!-- Product Cards Container -->
+    <div class="container content mt-3">
+        <div class="row">
+            <!-- Sample Product Card -->
+            <!-- Loop through each product and generate a card dynamically -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Name 1</h5>
+                        <p class="card-text">Category: Electronics</p>
+                        <p class="card-text">Price: $100</p>
+                        <p class="card-text">Stock: 50</p>
+                        <p class="card-text">Sold: 50</p>
+                        <p class="card-text">profit: 50</p>
+                        <a href="#" class="btn btn-primary">Edit Product</a>
+                        <a href="#" class="btn btn-danger">Delete Product</a>
+                    </div>
+                </div>
+            </div>
 
-if($week == "monday"){
+            <!-- Another Product Card Example -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Name 2</h5>
+                        <p class="card-text">Category: Fashion</p>
+                        <p class="card-text">Price: $50</p>
+                        <p class="card-text">Stock: 25</p>
+                        <p class="card-text">Sold: 50</p>
+                        <p class="card-text">profit: 50</p>
+                        <a href="#" class="btn btn-primary">Edit Product</a>
+                        <a href="#" class="btn btn-danger">Delete Product</a>
+                    </div>
+                </div>
+            </div>
 
-} else if($week == "tuesday"){
+            <!-- Example for Another Product -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Name 3</h5>
+                        <p class="card-text">Category: Home Appliances</p>
+                        <p class="card-text">Price: $200</p>
+                        <p class="card-text">Stock: 100</p>
+                        <p class="card-text">Sold: 50</p>
+                        <p class="card-text">profit: 50</p>
+                        <a href="#" class="btn btn-primary">Edit Product</a>
+                        <a href="#" class="btn btn-danger">Delete Product</a>
+                    </div>
+                </div>
+            </div>
 
-}
-?>
+            <!-- Add more product cards dynamically based on your backend data -->
+        </div>
+    </div>
 
+    
 
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
