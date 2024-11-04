@@ -1,12 +1,13 @@
 <?php 
+ require_once($_SERVER["DOCUMENT_ROOT"]."/app/config/Directories.php");
+ require_once(ROOT_DIR."includes\header.php");
     session_start();
-    require_once($_SERVER["DOCUMENT_ROOT"]."/app/config/Directories.php");
-    require once(ROOT_DIR."includes/header.php");
-    
+    require_once("includes\header.php");
+
     if(isset($_SESSION["error"])){
         $messageErr = $_SESSION["error"];
         unset($_SESSION["error"]);
-    }   
+    }
 
     if(isset($_SESSION["success"])){
         $messageSucc = $_SESSION["success"];
@@ -15,7 +16,7 @@
 ?>
 
     <!-- Navbar -->
-    <?php require_once("includes\\navbar.php"); ?>
+ <?php require_once(ROOT_DIR."includes\\navbar.php"); ?>
 
     <!-- Registration Form -->
     <div class="container mt-5">
@@ -46,7 +47,7 @@
                                 <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
                             </div>
                             <div class="mb-3">
-                                <label for="username" class="form-label">Email Address</label>
+                                <label for="username" class="form-label">Username</label>
                                 <input type="text" class="form-control" id="username" name="username" placeholder="Enter your email" required>
                             </div>
                             <div class="mb-3">
@@ -63,11 +64,11 @@
                         </form>
                     </div>
                     <div class="card-footer text-center">
-                        <p>Already have an account? <a href="login.html" class="text-primary">Login here</a></p>
+                        <p>Already have an account? <a href="login.php" class="text-primary">Login here</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <?php require_once(ROOT_DIR."includes/footer.php"); ?>
+    <?php  require_once(ROOT_DIR. "includes/footer.php"); ?>

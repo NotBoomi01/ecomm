@@ -1,5 +1,5 @@
-<?php
-   if(!isset($_SESSION["username"]) || (!isset($_SESSION["is_admin"]) || $_SESSION["is_admin"]!="1")){
+<?php 
+    if(!isset($_SESSION["username"]) || !isset($_SESSION["is_admin"]) || $_SESSION["is_admin"] != "1"){
     ?>
     <div class="container vh-100 d-flex justify-content-center align-items-center">
         <div class="text-center">
@@ -9,9 +9,10 @@
             <a href="login.html" class="btn btn-primary">Go to Login</a>
         </div>
     </div> 
-   </body>
-   </html>
+
+    </body>
+    </hmtl>
     <?php 
     exit;
-   }
+    }
     ?>

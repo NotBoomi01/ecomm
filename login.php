@@ -1,5 +1,6 @@
 <?php 
-    require_once("includes\header.php");
+require_once($_SERVER["DOCUMENT_ROOT"]."/app/config/Directories.php");
+    require_once(ROOT_DIR."includes\header.php");
 ?>
 
     <!-- Navbar -->
@@ -39,4 +40,4 @@
     
     
 
-    <?php require_once(ROOT_DIR."includes/footer.php"); ?> 
+    <?php  require_once(ROOT_DIR. "includes/footer.php"); ?>

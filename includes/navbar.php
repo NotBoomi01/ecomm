@@ -1,8 +1,3 @@
-<?php
-session_start();
-require_once(__DIR__."/app/config/Directories.php");
-require_once(ROOT_DIR."includes/header.php"); ?>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">MyShop</a>
@@ -11,26 +6,30 @@ require_once(ROOT_DIR."includes/header.php"); ?>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <?php if(!isset($_SESSION["username"]);  
-                ?>
-            <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASE_URL; ?>login.php">Login</a>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="<?php echo BASE_URL;
+                    ?>index.php">Home</a>
+                </li>
+                <?php if(!isset($_SESSION["username"])) {?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo BASE_URL;
+                    ?>login.php">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASE_URL; ?>registration.php">Register</a>
+                    <a class="nav-link" href="<?php echo BASE_URL;
+                    ?>registration.php">Register</a>
                 </li>
-                    
+                <?php }?>
                 
-                  
-                    <?php if isset($_SESSION["username"]) && (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] == "1")) { ?>
-                    <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASE_URL; ?>views/admin/products/index.php">Products</a>
-                </li>
-               <?php } ?> 
-
-
+                <?php if(isset($_SESSION["username"]) && (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] == "1")) {?>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASE_URL; ?>cart.php">Cart</a>
+                    <a class="nav-link" href="<?php echo BASE_URL;
+                    ?>views/admin/product/index.php">Products</a>
+                </li>
+                <?php } ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo BASE_URL;
+                    ?>cart.php">Cart</a>
                 </li>
 
                     <!-- Dropdown for Signed-in User -->
