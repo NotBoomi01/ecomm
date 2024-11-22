@@ -1,8 +1,8 @@
 <?php 
- require_once($_SERVER["DOCUMENT_ROOT"]."/app/config/Directories.php");
- require_once(ROOT_DIR."includes\header.php");
+
     session_start();
-    require_once("includes\header.php");
+    require_once($_SERVER["DOCUMENT_ROOT"]."/app/config/Directories.php");
+    require_once(ROOT_DIR."includes\header.php");
 
     if(isset($_SESSION["error"])){
         $messageErr = $_SESSION["error"];
@@ -16,7 +16,7 @@
 ?>
 
     <!-- Navbar -->
- <?php require_once(ROOT_DIR."includes\\navbar.php"); ?>
+    <?php require_once(ROOT_DIR."includes\\navbar.php"); ?>
 
     <!-- Registration Form -->
     <div class="container mt-5">
