@@ -43,6 +43,7 @@ require_once(ROOT_DIR."includes/header.php");
                         </tr>
                     </tbody>
                 </table>
+                
             </div>
 
             <!-- Cart Summary and Payment -->

@@ -1,9 +1,11 @@
 
 <?php 
+
+
     session_start();
     require_once($_SERVER["DOCUMENT_ROOT"]."/app/config/Directories.php");
     require_once(ROOT_DIR."includes\header.php");
-    include(ROOT_DIR."app/products/get_products.php");
+    include(ROOT_DIR."app/product/get_products.php");
 ?>
 
     
